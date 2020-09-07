@@ -19,6 +19,7 @@ $.ajax({
                 "</tr>"
             )
         }
+        $('#tableNow').DataTable();
     },
     error: function(){
         console.log('Il y a eu une erreur')
@@ -46,6 +47,7 @@ $.ajax({
                 "</tr>"
             )
         }
+        $('#tableEnd').DataTable();
     },
     error: function(){
         console.log('Il y a eu une erreur')

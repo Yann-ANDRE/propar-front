@@ -7,19 +7,20 @@
     <title>PROPAR | Accueil</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.dataTables.css">
 </head>
 
 <body>
     <div class="top-bar">
         <p class="top-bar-title">PROPAR</p>
-        <a class="top-bar-link" href="#">Se connecter</a>
+        <a class="top-bar-link" href="login.html">Se connecter</a>
     </div>
     <div class="main">
         <div class="table-container">
             <div class="table-now-operation">
                 <h1 class="table-title">Opération en cours</h1>
                 <div class="table-div">
-                    <table class="table">
+                    <table class="table" id="tableNow">
                         <thead>
                             <tr>
                                 <td>Numéro d'opération</td>
@@ -36,7 +37,7 @@
             <div class="table-end-operation">
                 <h1 class="table-title">Opération terminé</h1>
                 <div class="table-div">
-                    <table class="table">
+                    <table class="table" id="tableEnd">
                         <thead>
                             <tr>
                                 <td>Numéro d'opération</td>
@@ -54,7 +55,9 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
     <script src="js/index.js"></script>
+
 </body>
 
 </html>
