@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPAR | Accueil</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <p class="top-bar-title">PROPAR</p>
+        <a class="top-bar-link" href="#">Se connecter</a>
+    </div>
+    <div class="main">
+        <div class="table-container">
+            <div class="table-now-operation">
+                <h1 class="table-title">Opération en cours</h1>
+                <div class="table-div">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Numéro d'opération</td>
+                                <td>Date de début</td>
+                                <td>Identifiant du client</td>
+                                <td>Employé affécté</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyNow">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table-end-operation">
+                <h1 class="table-title">Opération terminé</h1>
+                <div class="table-div">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>Numéro d'opération</td>
+                                <td>Date de début</td>
+                                <td>Date de fin</td>
+                                <td>Identifiant du client</td>
+                                <td>Employé affécté</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyEnd">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

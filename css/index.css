@@ -1,0 +1,60 @@
+.top-bar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    background-color: #192A3E;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+.top-bar-title{
+    font-family: 'Poppins-SB', sans-serif;
+    font-size: 30px;
+}
+.top-bar-link{
+    font-family: 'Poppins-M', sans-serif;
+    font-size: 18px;
+    background-color: #F7685B;
+    padding: 8px 10px;
+    border: 2px solid #F7685B;
+    border-radius: 5px;
+    transition: .3s;
+}
+.top-bar-link:hover{
+    background: none;
+}
+.table-title{
+    font-family: 'Poppins-R', sans-serif;
+    font-size: 35px;
+}
+.table-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+}
+
+.table{
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: 'Poppins-L', sans-serif;
+}
+
+.table thead td{
+    background-color: #192A3E;
+    color: #FFFFFF;
+    padding: 20px 0;
+    font-size: 19px;
+}
+.table tbody td{
+    padding: 12px 0;
+    color: #192A3E;
+    font-size: 17px;
+    border-bottom: 4px solid #192A3E;
+}
