@@ -5,16 +5,17 @@ $.ajax({
     beforeSend: function(){
         $('#tbodyNow').append("<tr><td colspan='4'>Changement ...</td></tr>")
     },
-
+    
     success: function(data) {
         
         $('#tbodyNow').html("")
+        console.log(data)
         for(let i = 0; i < data.length; i++){
             $('#tbodyNow').append(
                 "<tr>" + 
                     "<td>" + data[i].id + "</td>" +
                     "<td>" + data[i].startDate.substr(0, 10).replaceAll('-', '/') + "</td>" +
-                    "<td>" + data[i].idCustomer.id + "</td>" +
+                    "<td>" + data[i].idCustomer.firstname + " " + data[i].idCustomer.name + "</td>" +
                     "<td>" + data[i].idWorker.firstname + " " + data[i].idWorker.name + "</td>" +
                 "</tr>"
             )
@@ -22,7 +23,8 @@ $.ajax({
         $('#tableNow').DataTable();
     },
     error: function(){
-        console.log('Il y a eu une erreur')
+        $('#tbodyNow').html("")
+        $('#tbodyNow').append("<tr><td colspan='4'>Connexion au serveur impossible réessayer plus tard ...</td></tr>")
     }
 })
 
@@ -42,7 +44,7 @@ $.ajax({
                     "<td>" + data[i].id + "</td>" +
                     "<td>" + data[i].startDate.substr(0, 10).replaceAll('-', '/') + "</td>" +
                     "<td>" + data[i].endDate.substr(0, 10).replaceAll('-', '/') + "</td>" +
-                    "<td>" + data[i].idCustomer.id + "</td>" +
+                    "<td>" + data[i].idCustomer.firstname + " " + data[i].idCustomer.name + "</td>" +
                     "<td>" + data[i].idWorker.firstname + " " + data[i].idWorker.name + "</td>" +
                 "</tr>"
             )
@@ -50,6 +52,7 @@ $.ajax({
         $('#tableEnd').DataTable();
     },
     error: function(){
-        console.log('Il y a eu une erreur')
+        $('#tbodyEnd').html("")
+        $('#tbodyEnd').append("<tr><td colspan='5'>Connexion au serveur impossible réessayer plus tard ...</td></tr>")
     }
 })

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPAR | Espace employé</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dashboard_add_op.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="topbar">
+        <img src="img/bars.svg" id="sidebarBtn" alt="Sidebar buttun" width="32px">
+        <p class="user-info" id="userInfo"></p>
+        <a href="#" class="topbar-btn" id="disconnectBtn">Se déconnecter</a>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <a class="sidebar-link" href="dashboard.html">Mes opérations</a>
+        <a class="sidebar-link" href="dashboard_take_op.html">Prendre une opération</a>
+        <a class="sidebar-link" href="dashboard_end_op.html">Opération terminé</a>
+        <a class="sidebar-link" href="dashboard_add_op.html">Ajouter une opération</a>
+    </div>
+    <div class="main">
+        <h1 class="title">Ajouté un employé</h1>
+        <p id="error"></p>
+        <br>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="input-container">
+                    <input class="input-text" type="text" id="workerFirstname" placeholder="Prénom de l'employé" required>
+                    <input class="input-text" type="text" id="workerName" placeholder="Nom de l'employé" required>
+                    <input class="input-text" type="password" id="workerPassword" placeholder="Mot de passe de l'employé" required>
+                    <input class="input-text" type="password" id="workerPasswordConfirm" placeholder="Confirmation du mot de passe de l'employé" required>
+                    <input class="input-text" type="text" id="workerUsername" placeholder="Nom d'utilisateur de l'employé" required>
+                </div>
+                    <select class="input-text" name="workerRole" id="workerRole" style="width: 20%; text-align-last: center;">
+                        <option value="Apprenti">Apprenti</option>
+                        <option value="Senior">Senior</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+                    <br>
+                    <input id="addOpSubmit" class="input-submit" type="submit" value="Ajouter l'employé">
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dashboard_add_worker.js"></script>
+    <script src="js/disconnect.js"></script>
+</body>
+</html>

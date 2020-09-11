@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPAR | Espace employé</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="topbar">
+        <img src="img/bars.svg" id="sidebarBtn" alt="Sidebar buttun" width="32px">
+        <p class="user-info" id="userInfo"></p>
+        <a href="#" class="topbar-btn" id="disconnectBtn">Se déconnecter</a>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <a class="sidebar-link" href="dashboard.html">Mes opération</a>
+        <a class="sidebar-link" href="dashboard_take_op.html">Prendre une opération</a>
+        <a class="sidebar-link" href="dashboard_end_op.html">Opérations terminés</a>
+        <a class="sidebar-link" href="dashboard_add_op.html">Ajouter une opération</a>
+    </div>
+    <div class="main">
+        <h1 class="title">Opérations terminé</h1>
+        <table id="tableEndOp" class="table">
+            <thead>
+                <tr>
+                    <td>Numéro d'opération</td>
+                    <td>Nom du client</td>
+                    <td>Commentaire</td>
+                    <td>Date de début</td>
+                    <td>Date de fin</td>
+                    <td>Type d'opération</td>
+                </tr>
+            </thead>
+            <tbody id="tbodyOp">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dashboard_end_op.js"></script>
+    <script src="js/disconnect.js"></script>
+    
+</body>
+</html>

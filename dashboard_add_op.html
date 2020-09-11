@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROPAR | Espace employé</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/dashboard_add_op.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+</head>
+<body>
+    <div class="topbar">
+        <img src="img/bars.svg" id="sidebarBtn" alt="Sidebar buttun" width="32px">
+        <p class="user-info" id="userInfo"></p>
+        <a href="#" class="topbar-btn" id="disconnectBtn">Se déconnecter</a>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <a class="sidebar-link" href="dashboard.html">Mes opérations</a>
+        <a class="sidebar-link" href="dashboard_take_op.html">Prendre une opération</a>
+        <a class="sidebar-link" href="dashboard_end_op.html">Opération terminé</a>
+        <a class="sidebar-link" href="dashboard_add_op.html">Ajouter une opération</a>
+    </div>
+    <div class="main">
+        <h1 class="title">Ajouté une opération</h1>
+        <p id="error"></p>
+        <br>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="input-container">
+                    <input class="input-text" type="text" id="customerFirstname" placeholder="Prénom du client" required>
+                    <input class="input-text" type="text" id="customerName" placeholder="Nom du client" required>
+                    <input class="input-text" type="text" id="customerPhone" placeholder="Numéro de téléphone du client" required maxlength="10">
+                    <input class="input-text" type="date" id="startDate" placeholder="Date de début" required>
+                </div>
+                    <textarea class="input-text" name="comment" id="comment" required placeholder="Commentaire sur l'opération" rows="8"></textarea>
+                    <br>
+                    <select class="input-text" name="typeOp" id="typeOp">
+                        <option value="Petite">Petite - 3000€</option>
+                        <option value="Moyenne">Moyenne - 5000€</option>
+                        <option value="Grande">Grande - 10 000€</option>
+                    </select>
+                    <br>
+                    <input id="addOpSubmit" class="input-submit" type="submit" value="Ajouter l'opération">
+            </form>
+        </div>
+        
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dashboard_add_op.js"></script>
+    <script src="js/disconnect.js"></script>
+</body>
+</html>
