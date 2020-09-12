@@ -43,7 +43,7 @@ if(localStorage.getItem('auth_token')){
                                 $('#trOp').append("<td><a class='table-link' href='" + freeOp[i].id + "' id='takeOperation-" + freeOp[i].id + "'>Prendre l'opération</a></td>")
                             } else if(nowWorkerOp.length < 3 && data.role == "Senior"){
                                 $('#trOp').append("<td><a class='table-link' href='" + freeOp[i].id + "' id='takeOperation-" + freeOp[i].id + "'>Prendre l'opération</a></td>")
-                            } else if(nowWorkerOp.length < 3 && data.role == "Apprenti"){
+                            } else if(nowWorkerOp.length < 1 && data.role == "Apprenti"){
                                 $('#trOp').append("<td><a class='table-link' href='" + freeOp[i].id + "' id='takeOperation-" + freeOp[i].id + "'>Prendre l'opération</a></td>")
                             }
                             $('#takeOperation-' + freeOp[i].id).click(function(e){

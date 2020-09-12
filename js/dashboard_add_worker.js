@@ -23,7 +23,7 @@ if(localStorage.getItem('auth_token')){
                 let workerPasswordConfirm = $('#workerPasswordConfirm').val()
                 let workerRole = $('#workerRole').val()
 
-                if(workerFirstname.length > 0 && workerName.length > 0 && workerUsername.length > 0 && workerPassword.length == 10 && workerPasswordConfirm.length > 0 && workerRole.length > 0){
+                if(workerFirstname.length > 0 && workerName.length > 0 && workerUsername.length > 0 && workerPassword.length > 0 && workerPasswordConfirm.length > 0 && workerRole.length > 0){
                     if(workerPassword == workerPasswordConfirm){
                         $.ajax({
                             url: 'http://localhost:8000/api/worker/add',
